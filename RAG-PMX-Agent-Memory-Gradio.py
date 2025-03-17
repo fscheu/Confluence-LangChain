@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 
 # Imports para Indexacion
 from glob import glob
-from langchain.document_loaders import BSHTMLLoader, PyPDFLoader
+from langchain_community.document_loaders import BSHTMLLoader, PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 
@@ -162,15 +162,15 @@ class PMXAgent:
         }
 
 
-config = {"configurable": {"thread_id": "2"}}
+# config = {"configurable": {"thread_id": "2"}}
 # an_agent = PMXAgent()
 
 
-def chat_with_agent(question: str):
-    initial_state = {"question": question}
-    # Ejecutar el grafo
-    final_state = an_agent.graph.invoke(initial_state, config)
-    return final_state["answer"]
+# def chat_with_agent(question: str):
+#     initial_state = {"question": question}
+#     # Ejecutar el grafo
+#     final_state = an_agent.graph.invoke(initial_state, config)
+#     return final_state["answer"]
 
 
 # Ejemplo de uso

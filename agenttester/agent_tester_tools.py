@@ -1,5 +1,5 @@
 import operator
-from typing import Annotated, Sequence, TypedDict, List
+from typing import Annotated, TypedDict, List
 from colorama import Fore, Style
 
 
@@ -47,7 +47,7 @@ class TestCaseList(BaseModel):
 class AgentState(TypedDict):
     ticket_list: List[JiraTicket]
     testcase_list: List[TestCase]
-    messages: Annotated[Sequence[BaseMessage], operator.add]
+    messages: Annotated[List[BaseMessage], operator.add]
     next: str
 
 
